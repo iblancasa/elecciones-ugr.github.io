@@ -63,3 +63,6 @@ function drawChart() {
     var chart_sectores = new google.visualization.BarChart(document.getElementById('sectores'));
     chart_sectores.draw(sectores, options);
 }
+
+window.onload = drawChart();
+window.onresize = drawChart;
