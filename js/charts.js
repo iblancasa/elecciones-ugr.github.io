@@ -40,7 +40,6 @@ function drawChart() {
 	    columnas[resultados[c]['Sector'][s]["Sector"]] = [];
         }
     }
-    console.log( columnas );
     for ( var c in resultados ) {
         for ( var s in resultados[c]['Sector'] ) {
 	    columnas[resultados[c]['Sector'][s]["Sector"]].push(parseFloat(resultados[c]['Sector'][s]['Resultado']));
@@ -48,7 +47,6 @@ function drawChart() {
     }
 
     for (var c in columnas ) {
-	console.log("Columna " + c);
 	sectores.addRow([c,columnas[c][0],columnas[c][1]]);
     }
 	
@@ -64,5 +62,4 @@ function drawChart() {
     chart_sectores.draw(sectores, options);
 }
 
-window.onload = drawChart();
 window.onresize = drawChart;
