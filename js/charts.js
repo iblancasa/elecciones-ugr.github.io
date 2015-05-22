@@ -41,7 +41,6 @@ function drawChart() {
 	    columnas[resultados[c]['Sector'][s]["Sector"]] = [];
         }
     }
-    console.log( columnas );
     for ( var c in resultados ) {
         for ( var s in resultados[c]['Sector'] ) {
 	    columnas[resultados[c]['Sector'][s]["Sector"]].push(parseFloat(resultados[c]['Sector'][s]['Resultado']));
@@ -50,15 +49,23 @@ function drawChart() {
     }
 
     for (var c in columnas ) {
-	console.log( columnas[c] );
-	sectores.addRow([c,columnas[c][0],columnas[c][1],columnas[c][2],columnas[c][3]]);
+	var breve = c.replace('PROFESORADO','Pr');
+	breve = breve.replace('DOCTOR','Dr');
+	breve = breve.replace('PERMANENTE','Perm.');
+	breve = breve.replace('ASOCIADOS','Asoc.');
+	sectores.addRow([breve,columnas[c][0],columnas[c][1],columnas[c][2],columnas[c][3]]);
     }
 	
     // Set chart options
     options = {'title':'Resultados elecciones rectorado - Sectores',
                'width':'95%',
-               'fontSize' : 18,
                'height':500,
+	       'vAxis' : {'maxTextLines': 5},
+	       'hAxis' : {'maxTextLines': 5},
+	       animation:{
+		   duration: 500,
+		   easing: 'out',
+	       },
                'legend': {'position':'bottom'} };
     
     // Instantiate and draw our chart, passing in some options.
