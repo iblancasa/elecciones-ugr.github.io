@@ -13,39 +13,8 @@
     <script src="js/kube.min.js"></script>
     <script src='resultados.jsonp'></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript">
+    <script type="text/javascript" src='js/charts.js'>
 
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Candidato');
-        data.addColumn('number', 'Porcentaje de votos');
-        for ( var c in resultados ) {
-          data.addRow([c, parseFloat(resultados[c]['Total'])]);
-        }
-
-        // Set chart options
-        var options = {'title':'Resultados elecciones rectorado',
-                       'width':'95%',
-                       'is3D' : true,
-                       'fontSize' : 36,
-                       'height':400,
-                       'legend': {'position':'bottom'}};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('total'));
-        chart.draw(data, options);
-      }
     </script>
 
 </head>
@@ -56,29 +25,10 @@
       <div class='unit-90' id='total'>
       </div>
 
+      <div class='unit-90' id='sectores'>
+      </div>
+
     </div>
 
-  <div class="units-row">
-    <div class="unit-centered unit-40">
-      <table class="table-bordered">
-        <thead>
-          <tr>
-            <th>Sector</th>
-            <th>Coeficiente Ponderación</th>
-            <th>Votos</th>
-            <th>Resultados</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 </body>
 </html>
