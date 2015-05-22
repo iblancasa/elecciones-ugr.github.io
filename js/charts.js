@@ -36,18 +36,22 @@ function drawChart() {
     var columnas = new Object;
     for ( var c in resultados ) {
 	sectores.addColumn('number', '% '+c);
+	sectores.addColumn({type:'number',role:'annotation'});
 	for ( var s in resultados[c]['Sector'] ) {
 	    columnas[resultados[c]['Sector'][s]["Sector"]] = [];
         }
     }
+    console.log( columnas );
     for ( var c in resultados ) {
         for ( var s in resultados[c]['Sector'] ) {
 	    columnas[resultados[c]['Sector'][s]["Sector"]].push(parseFloat(resultados[c]['Sector'][s]['Resultado']));
+	    columnas[resultados[c]['Sector'][s]["Sector"]].push(parseFloat(resultados[c]['Sector'][s]['Votos']));
 	}
     }
 
     for (var c in columnas ) {
-	sectores.addRow([c,columnas[c][0],columnas[c][1]]);
+	console.log( columnas[c] );
+	sectores.addRow([c,columnas[c][0],columnas[c][1],columnas[c][2],columnas[c][3]]);
     }
 	
     // Set chart options
