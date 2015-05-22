@@ -22,7 +22,7 @@ function drawChart() {
     var options = {'title':'Resultados elecciones rectorado',
                    'width':'95%',
                    'is3D' : true,
-                   'fontSize' : 36,
+                   'fontSize' : 24,
                    'height':400,
                    'legend': {'position':'bottom'}};
     
@@ -53,7 +53,7 @@ function drawChart() {
     // Set chart options
     options = {'title':'Resultados elecciones rectorado - Sectores',
                'width':'95%',
-               'fontSize' : 24,
+               'fontSize' : 18,
                'height':500,
                'legend': {'position':'bottom'} };
     
