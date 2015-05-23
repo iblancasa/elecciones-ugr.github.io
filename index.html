@@ -23,11 +23,10 @@
     <h2 class='text-centered'><button class="btn btn-blue btn-outline btn-round">Porcentaje escrutado: <span class='label label-red'><script type='text/javascript'>document.write(escrutado)</script>%</span></button></h2>
 
     <div class='units-row'>
-      <div class='unit-90' id='total'>
-      </div>
 
-      <div class='unit-90' id='sectores'>
-      </div>
+      <div class='unit-90' id='total'></div>
+
+      <div class='unit-90' id='sectores'></div>
 
     </div>
 
@@ -35,9 +34,10 @@
 	Esta web está hecha desde la <a href='http://osl.ugr.es'>Oficina de Software Libre de la UGR</a> y se puede <a href='http://github.com/elecciones-ugr'>descargar, copiar y adaptar</a> como software libre que es.</button>
     </h3>
     <script type='text/javascript'>
-$(function() { // esto parece que no sirve
+$(function() { 
     $('#total').css('opacity',escrutado/100);
     $('#sectores').css('opacity',escrutado/100);
-});    </script>
+});    
+    </script>
 </body>
 </html>

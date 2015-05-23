@@ -22,7 +22,6 @@ function drawChart() {
     var options = {'title':'Resultados elecciones rectorado',
                    'width':'95%',
                    'is3D' : true,
-                   'fontSize' : 24,
                    'height':400,
                    'legend': {'position':'bottom'}};
     
