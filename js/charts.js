@@ -58,14 +58,11 @@ function drawChart() {
 	
     // Set chart options
     options = {'title':'Resultados elecciones rectorado - Sectores',
+	       animation: {"startup": true,
+			  "duration": 1000,
+			  "easing": 'out'},
                'width':'95%',
                'height':500,
-	       'vAxis' : {'maxTextLines': 5},
-	       'hAxis' : {'maxTextLines': 5},
-	       animation:{
-		   duration: 500,
-		   easing: 'out',
-	       },
                'legend': {'position':'bottom'} };
     
     // Instantiate and draw our chart, passing in some options.
