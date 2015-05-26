@@ -23,7 +23,9 @@ function drawChart() {
                    'width':'95%',
                    'is3D' : true,
                    'height':400,
-                   'legend': {'position':'bottom'}};
+		   'colors': ['#FFCC00','#6600CC'],
+                   'legend': {'position':'top',
+			      'maxLines':2}};
     
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('total'));
@@ -62,6 +64,7 @@ function drawChart() {
 			  "easing": 'out'},
                'width':'95%',
                'height':500,
+	       'colors': ['#FFCC00','#6600CC'],
                'legend': {'position':'bottom'} };
     
     // Instantiate and draw our chart, passing in some options.
