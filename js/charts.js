@@ -23,7 +23,7 @@ function drawChart() {
                    'width':'95%',
                    'is3D' : true,
                    'height':400,
-		   'colors': ['#FFCC00','#6600CC'],
+		   'colors': ['#FCC541','#27C6FB'],
                    'legend': {'position':'top',
 			      'maxLines':2}};
     
@@ -64,7 +64,7 @@ function drawChart() {
 			  "easing": 'out'},
                'width':'95%',
                'height':500,
-	       'colors': ['#FFCC00','#6600CC'],
+	       'colors': ['#FCC541','#27C6FB'],
                'legend': {'position':'bottom'} };
     
     // Instantiate and draw our chart, passing in some options.
